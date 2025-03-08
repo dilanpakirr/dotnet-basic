@@ -1,5 +1,12 @@
-<div class="row mt-3">
+@model List<Course>
+<div class="d-flex justify-content-between align-items-center">
     <h1 class="mb-3">Kurslar</h1>
-    @await Html.PartialAsync("_CourseCard")
-    @await Html.PartialAsync("_CourseCard")
+    <a class="btn btn-outline-danger" asp-controller="Course" asp-action="List"> Tüm Kurslar</a>
+</div>
+<div class="row mt-3">
+
+    @foreach (var course in Model)
+    {
+        @await Html.PartialAsync("_CourseCard", course)
+    }
 </div>
