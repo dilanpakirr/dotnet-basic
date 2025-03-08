@@ -39,7 +39,7 @@ namespace dotnet_basics.Controllers
             List<Product> products = new List<Product> {
                 new Product { productName = "Laptop", productDescription = "This is a laptop", productPrice = 50000, productStatus = true },
                 new Product { productName = "Mobile", productDescription = "This is a mobile", productPrice = 20000, productStatus = true },
-                new Product { productName = "Tablet", productDescription = "This is a tablet", productPrice = 15000, productStatus = true }
+                new Product { productName = "Tablet", productDescription = "This is a tablet", productPrice = 15000, productStatus = false }
             };
             return View(products);
         }

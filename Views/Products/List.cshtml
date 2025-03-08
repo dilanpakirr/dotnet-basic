@@ -1,18 +1,23 @@
 @model List<Product>
 <h1>product list</h1>
 <div class="row mt-3">
+
 @foreach (var product in Model)
 {
-        <div class="col-4">
-            <div class="card" style="width: 18rem;">
-                <img src="https://placehold.co/600x400" class="card-img-top" alt="...">
-                <div class="card-body">
-                    <h5 class="card-title
-                        ">@product.productName</h5>
-                    <p class="card-text">@product.productDescription</p>
-                    <p class="card-text">@product.productPrice</p>
-                    <a href="#" class="btn btn-danger">İncele</a>
+    @if (product.productStatus == true)
+    {
+
+            <div class="col-4">
+                <div class="card" style="width: 18rem;">
+                    <img src="https://placehold.co/600x400" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title
+                                                                                                ">@product.productName</h5>
+                        <p class="card-text">@product.productDescription</p>
+                        <p class="card-text">@product.productPrice</p>
+                        <a href="#" class="btn btn-danger">İncele</a>
+                    </div>
                 </div>
             </div>
-        </div>
+    }
 }
