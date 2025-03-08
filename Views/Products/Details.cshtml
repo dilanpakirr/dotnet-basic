@@ -1,0 +1,18 @@
+@model Product
+<h1>product details</h1>
+<div class="row mt-3">
+    <div class="col-4">
+        <img src="https://placehold.co/600x400" class="card-img-top" alt="...">
+    </div>
+    <div class="col-6">
+
+        <p>@Model.productName</p>
+        <p>@Model.productDescription</p>
+        <p>@Model.productPrice</p>
+        <p>@Model.productStatus</p>
+        @* @ViewData["ProductName"]
+    @ViewData["ProductDescription"]
+    @ViewData["ProductPrice"]
+    @ViewData["ProductStatus"] *@
+    </div>
+</div>
