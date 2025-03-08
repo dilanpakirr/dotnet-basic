@@ -1,1 +1,12 @@
-<h1>products index</h1>
+@model List<Product>
+<div class="d-flex justify-content-between align-items-center">
+    <h1 class="mb-3">Ürünler</h1>
+    <a class="btn btn-outline-danger" asp-controller="Products" asp-action="List"> Tüm Ürünler</a>
+</div>
+<div class="row mt-3">
+
+    @foreach (var product in Model)
+    {
+        @await Html.PartialAsync("_ProductCard", product)
+    }
+</div>
